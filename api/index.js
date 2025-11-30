@@ -10,6 +10,10 @@ app.use(require("cors")());
 
 connectDB();
 
+app.get("/", (req, res) => {
+  res.send("StudyAI Backend is running ⚡");
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/files", fileRoutes);
 
